@@ -20,3 +20,34 @@ body, h1 {
     border-radius: 5px;
     text-align: center;
 }
+
+.carousel-container {
+    overflow: hidden;
+    width: 90%;
+}
+
+.carousel-container * {
+    box-sizing: border-box;
+}
+
+.carousel {
+    transform-style: preserve-3d;
+}
+
+.carousel_photo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 4rem;
+    z-index: 100;
+    transition: transform .5, opacity .5s, z-index .5s;
+}
+
+.carousel_photo.initial,
+.carousel_photo.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
