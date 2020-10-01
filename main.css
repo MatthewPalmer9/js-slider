@@ -1,3 +1,7 @@
+:root {
+    --transition-speed: 600ms;
+}
+
 body, h1 {
     margin: 0;
     padding: 0;
@@ -50,4 +54,49 @@ body, h1 {
     opacity: 1;
     position: relative;
     z-index: 900;
+}
+
+.carousel_photo.prev,
+.carousel_photo.next {
+    z-index: 800;
+}
+
+.carousel_button--prev,
+.carousel_button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+.carousel_button--prev {
+  left:0;
+}
+.carousel_button--next {
+  right:0;
+}
+.carousel_button--prev::after,
+.carousel_button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.carousel_button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.slider {
+    transition: transform var(--transition-speed);
 }
