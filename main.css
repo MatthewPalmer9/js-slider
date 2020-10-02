@@ -8,6 +8,24 @@ body {
     background-color: #d1d1d1;
 }
 
+h1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+hr {
+    margin: 0;
+    border: 1px solid black;
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
 img {
     width: 50vw;
     margin: 0 auto;
@@ -18,7 +36,7 @@ img {
     position: relative;
     white-space: nowrap;
     width: 50vw;
-    margin: 100px auto 0 auto;
+    margin: 20px auto 0 auto;
     border: 2px solid black;
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.8); 
@@ -50,4 +68,9 @@ img {
     font-size: 30px;
     color: white;
     opacity: 0.7;
+}
+
+p {
+    text-align: center;
+    padding-bottom: 20px;
 }
