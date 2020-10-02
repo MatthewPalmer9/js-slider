@@ -8,6 +8,11 @@ body {
     background-color: #d1d1d1;
 }
 
+#credit {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
 h1 {
     display: grid;
     grid-template-columns: 1fr;
@@ -70,7 +75,28 @@ img {
     opacity: 0.7;
 }
 
+span {
+    color: red;
+    font-size: 24px;
+}
+
 p {
     text-align: center;
     padding-bottom: 20px;
+}
+
+@media only screen 
+    and (max-device-width: 760px)
+    and (min-device-width: 360px) {
+    .carousel-container, .carousel-slide, img {
+        width: 100vw;
+    }
+}
+
+@media only screen 
+    and (min-device-width: 760px)
+    and (max-device-width: 360px) {
+    .carousel-container, .carousel-slide, img {
+        width: 80vw;
+    }
 }
